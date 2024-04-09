@@ -36,6 +36,9 @@ const ProfileCard = () => {
         "Matplotlib",
         "Seaborn",
         "ScikitLearn",
+        "Web Scraping",
+        "BeautifulSoup bs4",
+        "Selenium"
     ];
 
     return (
