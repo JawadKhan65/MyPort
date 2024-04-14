@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Heading, HStack, Avatar, Badge, Link } from '@chakra-ui/react';
+import { Box, Heading, HStack, Avatar, Badge, Link, Button } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import imgurl from "../IMG_0402.jpg"
-
+import resume from "../jawad_khan_resume.pdf"
 const ProfileCard = () => {
 
     const content = {
@@ -67,6 +67,11 @@ const ProfileCard = () => {
                 <Box as='span' maxW={{ lg: "25vw" }} maxH={{ lg: "25vw" }} margin={2} color='gray.600' fontSize='sm' display="flex" flexDirection="column" flexWrap="wrap">
                     {content.contact}
                 </Box>
+            </Box>
+            <Box margin={2} >
+                <Button colorScheme="purple">
+                    <a href={resume} download>Download My RESUME </a>
+                </Button>
             </Box>
             <Box margin={2} display="flex" alignItems="center">
                 <HStack spacing={2}>
