@@ -47,7 +47,9 @@ const ProfileCard = () => {
             <Box margin={2} display='flex' flexWrap="wrap" alignItems='baseline'>
                 <Heading size="lg" color="gray.600" fontWeight={600}>{content.Name}</Heading>
             </Box>
-            <Box margin={2} maxW={{ lg: "25vw" }} display='flex' w={{ lg: "25vw" }} maxH={{ base: "20vh", lg: "25vh" }} flexWrap="wrap" alignItems='baseline'>
+            <Box margin={2} maxW={{
+                lg: "25vw"
+            }} display='flex' w={{ lg: "25vw" }} maxH={{ base: "28vh", lg: "25vh", small: "35vw" }} flexWrap="wrap" alignItems='baseline'>
                 {skills.map((skill, index) => (
                     <Badge key={index} margin={1} borderRadius='full' px='2' colorScheme='purple' >
                         {skill}
@@ -55,16 +57,16 @@ const ProfileCard = () => {
                 ))}
             </Box>
 
-            <Box mt='10px' fontWeight='semibold' as='h4'>About Me</Box>
+            <Box mt='10px' margin={{ base: "5px" }} fontWeight='semibold' as='h4'>About Me</Box>
             <Box>
-                <Box as='span' maxW={{ lg: "25vw" }} maxH={{ lg: "28vw" }} margin={2} color='gray.600' fontSize='sm' display="flex" flexDirection="column" flexWrap="wrap">
+                <Box as='span' maxW={{ lg: "25vw" }} maxH={{ lg: "28vw", sm: "35vh" }} margin={2} color='gray.600' fontSize='sm' display="flex" flexDirection="column" flexWrap="wrap">
                     {content.Description}
                 </Box>
             </Box>
 
 
-            <Box>
-                <Box as='span' maxW={{ lg: "25vw" }} maxH={{ lg: "25vw" }} margin={2} color='gray.600' fontSize='sm' display="flex" flexDirection="column" flexWrap="wrap">
+            <Box mt='10px' margin={{ base: "5px" }} fontWeight='semibold' as='h4'>
+                <Box as='span' maxW={{ lg: "25vw" }} maxH={{ lg: "25vw", sm: "35vh" }} margin={2} color='gray.600' fontSize='sm' display="flex" flexDirection="column" flexWrap="wrap">
                     {content.contact}
                 </Box>
             </Box>
@@ -86,7 +88,7 @@ const ProfileCard = () => {
                     </Link>
                 </HStack>
             </Box>
-        </Box>
+        </Box >
     );
 }
 
